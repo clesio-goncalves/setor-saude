@@ -4,10 +4,12 @@ import ifpi.capau.saude.dao.PacienteDao;
 import ifpi.capau.saude.modelo.Paciente;
 
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Transactional
@@ -24,11 +26,11 @@ public class PacienteController {
 	}
 
 	@RequestMapping("adicionaPaciente")
-	public String adiciona(Paciente paciente) {
+	public String adiciona(@Valid Paciente paciente, BindingResult result) {
 
-		/*
-		 * if (result.hasFieldErrors()) { return "paciente/novo"; }
-		 */
+		if (result.hasFieldErrors()) {
+			return "paciente/novo";
+		}
 
 		dao.adiciona(paciente);
 		return "paciente/lista";

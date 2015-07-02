@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Paciente {
@@ -14,16 +16,23 @@ public class Paciente {
 	@Id
 	@GeneratedValue
 	private Long codigo_paciente;
+	@NotNull
+	@Size(max = 255)
 	private String nome_paciente;
+	@NotNull
+	@Size(max = 255)
 	private String vinvulo_paciente;
 
+	@NotNull
 	@Temporal(TemporalType.DATE)
 	private Calendar data_nascimento;
 
+	@NotNull
+	@Size(max = 255)
 	private String sexo_paciente;
-	private Boolean alergia_paciente;
-	private String descricao_alergia;
-	private String antecedentes_patologicos_pessoais;
+	@NotNull
+	@Size(max = 255)
+	private String alergia_alimento_medicamento;
 	private String antecedentes_patologicos_familiares;
 	private Boolean etilismo;
 	private Boolean tabagismo;
@@ -69,29 +78,13 @@ public class Paciente {
 		this.sexo_paciente = sexo_paciente;
 	}
 
-	public Boolean getAlergia_paciente() {
-		return alergia_paciente;
+	public String getAlergia_alimento_medicamento() {
+		return alergia_alimento_medicamento;
 	}
 
-	public void setAlergia_paciente(Boolean alergia_paciente) {
-		this.alergia_paciente = alergia_paciente;
-	}
-
-	public String getDescricao_alergia() {
-		return descricao_alergia;
-	}
-
-	public void setDescricao_alergia(String descricao_alergia) {
-		this.descricao_alergia = descricao_alergia;
-	}
-
-	public String getAntecedentes_patologicos_pessoais() {
-		return antecedentes_patologicos_pessoais;
-	}
-
-	public void setAntecedentes_patologicos_pessoais(
-			String antecedentes_patologicos_pessoais) {
-		this.antecedentes_patologicos_pessoais = antecedentes_patologicos_pessoais;
+	public void setAlergia_alimento_medicamento(
+			String alergia_alimento_medicamento) {
+		this.alergia_alimento_medicamento = alergia_alimento_medicamento;
 	}
 
 	public String getAntecedentes_patologicos_familiares() {
