@@ -11,6 +11,8 @@
 	href="resources/css/bootstrap.css" />
 </head>
 <body>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<c:import url="../cabecalho.jsp" />
 
 	<div class="jumbotron">
 		<div class="container">
@@ -36,7 +38,7 @@
 						<div class="row">
 							<!-- VÍNCULO -->
 							<div class="form-group col-sm-4">
-								<label for="vinvulo_paciente">Vínculo*</label> <select
+								<label for="vinvulo_paciente">Vínculo institucional*</label> <select
 									class="form-control" name="vinvulo_paciente">
 									<option>Aluno</option>
 									<option>Comunidade</option>
@@ -63,19 +65,12 @@
 							</div>
 						</div>
 
-						<!-- ALERGIA -->
+						<!-- ALERGIA ALIMENTO MEDICAMENTO -->
 						<div class="form-group">
-							<div class="checkbox">
-								<label> <input type="checkbox" name="alergia_paciente">
-									Alergia a algum tipo de alimento ou medicamento
-								</label>
-							</div>
-						</div>
-
-						<!-- DESCRIÇÃO ALERGIA -->
-						<div class="form-group">
-							<label for="descricao_alergia">Descrição da alergia</label>
-							<textarea class="form-control" name="descricao_alergia"></textarea>
+							<label for="alergia_alimento_medicamento">Possui alergia
+								medicamentosa ou alimentar? Qual?*</label>
+							<textarea class="form-control"
+								name="alergia_alimento_medicamento" required></textarea>
 						</div>
 					</fieldset>
 
@@ -86,10 +81,10 @@
 
 						<!-- Antecedentes patológicos pessoais -->
 						<div class="form-group">
-							<label for="antecedentes_patologicos_pessoais">Antecedentes
-								patológicos pessoais*</label> <input type="text" class="form-control"
-								name="antecedentes_patologicos_pessoais" MAXLENGTH="255"
-								required>
+							<label for="antecedentes_patologicos_pessoais">Teve ou
+								tem algum problema de saúde? Quais?*</label>
+							<textarea class="form-control"
+								name="antecedentes_patologicos_pessoais" required></textarea>
 						</div>
 
 						<!-- Antecedentes patológicos familiares -->
@@ -142,7 +137,10 @@
 		</div>
 	</div>
 
+	<c:import url="../rodape.jsp" />
+
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/inputmask-plugin.js"></script>
 </body>
 </html>
