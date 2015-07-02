@@ -27,11 +27,6 @@ public class PacienteController {
 
 	@RequestMapping("adicionaPaciente")
 	public String adiciona(@Valid Paciente paciente, BindingResult result) {
-
-		if (result.hasFieldErrors()) {
-			return "paciente/novo";
-		}
-
 		dao.adiciona(paciente);
 		return "paciente/lista";
 	}

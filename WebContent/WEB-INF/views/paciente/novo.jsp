@@ -52,7 +52,7 @@
 							<div class="form-group col-sm-4">
 								<label for="data_nascimento">Data de nascimento*</label> <input
 									type="text" class="form-control" name="data_nascimento"
-									placeholder="00/00/0000" data-mask="00/00/0000" required>
+									placeholder="00/00/0000" data-mask="00/00/0000">
 							</div>
 
 							<!-- SEXO -->

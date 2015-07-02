@@ -23,7 +23,6 @@ public class Paciente {
 	@Size(max = 255)
 	private String vinvulo_paciente;
 
-	@NotNull
 	@Temporal(TemporalType.DATE)
 	private Calendar data_nascimento;
 
