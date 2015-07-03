@@ -32,12 +32,11 @@
 								<tr>
 									<th>Código</th>
 									<th>Nome</th>
+									<th>RG</th>
+									<th>Cartão SUS</th>
 									<th>Vínculo</th>
 									<th>Data de nascimento</th>
 									<th>Sexo</th>
-									<th>E</th>
-									<th>T</th>
-									<th>DI</th>
 									<th>Ações</th>
 								</tr>
 							</thead>
@@ -47,40 +46,19 @@
 									<tr>
 										<td>${paciente.codigo_paciente}</td>
 										<td>${paciente.nome_paciente}</td>
+										<td>${paciente.rg_paciente}</td>
+										<td>${paciente.cartao_sus_paciente}</td>
 										<td>${paciente.vinvulo_paciente}</td>
 										<td><fmt:formatDate
 												value="${paciente.data_nascimento.time}"
 												pattern="dd/MM/yyyy" /></td>
 										<td>${paciente.sexo_paciente}</td>
 
-										<!-- ETILISMO -->
-										<c:if test="${paciente.etilismo eq false}">
-											<td>Não</td>
-										</c:if>
-										<c:if test="${paciente.etilismo eq true}">
-											<td>Sim</td>
-										</c:if>
-
-										<!-- TABAGISMO -->
-										<c:if test="${paciente.tabagismo eq false}">
-											<td>Não</td>
-										</c:if>
-										<c:if test="${paciente.tabagismo eq true}">
-											<td>Sim</td>
-										</c:if>
-
-										<!-- DROGAS ILICITAS -->
-										<c:if test="${paciente.drogas_ilicitas eq false}">
-											<td>Não</td>
-										</c:if>
-										<c:if test="${paciente.drogas_ilicitas eq true}">
-											<td>Sim</td>
-										</c:if>
-
 										<!-- AÇÕES -->
 										<td><a href="" class="btn btn-success btn-xs"><span
 												class="glyphicon glyphicon-zoom-in"></span> Exibir</a> <a
-											href="" class="btn btn-info btn-xs"><span
+											href="mostraPaciente?codigo_paciente=${paciente.codigo_paciente}"
+											class="btn btn-info btn-xs"><span
 												class="glyphicon glyphicon-edit"></span> Editar </a> <!-- Botão exluir -->
 											<button class="btn btn-danger btn-xs" data-toggle="modal"
 												data-target="#${paciente.codigo_paciente}">

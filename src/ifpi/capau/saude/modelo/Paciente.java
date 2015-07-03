@@ -18,12 +18,22 @@ public class Paciente {
 	@Id
 	@GeneratedValue
 	private Long codigo_paciente;
+
 	@NotNull
 	@Size(max = 255)
 	private String nome_paciente;
+
 	@NotNull
 	@Size(max = 255)
 	private String vinvulo_paciente;
+
+	@NotNull
+	@Size(max = 255)
+	private String rg_paciente;
+
+	@NotNull
+	@Size(max = 15)
+	private String cartao_sus_paciente;
 
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
@@ -32,12 +42,14 @@ public class Paciente {
 	@NotNull
 	@Size(max = 255)
 	private String sexo_paciente;
+
 	@NotNull
 	@Size(max = 255)
 	private String alergia_alimento_medicamento;
-	
+
+	@Size(max = 255)
 	private String antecedentes_patologicos_familiares;
-	
+
 	private boolean etilismo;
 	private boolean tabagismo;
 	private boolean drogas_ilicitas;
@@ -64,6 +76,22 @@ public class Paciente {
 
 	public void setVinvulo_paciente(String vinvulo_paciente) {
 		this.vinvulo_paciente = vinvulo_paciente;
+	}
+
+	public String getRg_paciente() {
+		return rg_paciente;
+	}
+
+	public void setRg_paciente(String rg_paciente) {
+		this.rg_paciente = rg_paciente;
+	}
+
+	public String getCartao_sus_paciente() {
+		return cartao_sus_paciente;
+	}
+
+	public void setCartao_sus_paciente(String cartao_sus_paciente) {
+		this.cartao_sus_paciente = cartao_sus_paciente;
 	}
 
 	public Calendar getData_nascimento() {

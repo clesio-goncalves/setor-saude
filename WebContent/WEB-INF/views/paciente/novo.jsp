@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,7 +13,6 @@
 
 </head>
 <body>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<c:import url="../cabecalho.jsp" />
 
 	<div class="jumbotron">
@@ -34,6 +34,22 @@
 							<label for="nome_paciente">Nome*</label> <input type="text"
 								class="form-control" name="nome_paciente" autofocus
 								MAXLENGTH="255" required>
+						</div>
+
+						<div class="row">
+							<!-- RG -->
+							<div class="form-group col-sm-6">
+								<label for="rg_paciente">RG*</label> <input type="text"
+									class="form-control" name="rg_paciente" MAXLENGTH="255"
+									required>
+							</div>
+
+							<!-- CARTÃO SUS -->
+							<div class="form-group col-sm-6">
+								<label for="cartao_sus_paciente">Cartão SUS</label> <input
+									type="text" class="form-control" name="cartao_sus_paciente"
+									MAXLENGTH="15" onkeypress='return SomenteNumero(event)'>
+							</div>
 						</div>
 
 						<div class="row">
@@ -71,7 +87,7 @@
 							<label for="alergia_alimento_medicamento">Possui alergia
 								medicamentosa ou alimentar? Qual?*</label>
 							<textarea class="form-control"
-								name="alergia_alimento_medicamento" required></textarea>
+								name="alergia_alimento_medicamento" MAXLENGTH="255" required></textarea>
 						</div>
 					</fieldset>
 
@@ -85,7 +101,8 @@
 							<label for="antecedentes_patologicos_pessoais">Teve ou
 								tem algum problema de saúde? Quais?*</label>
 							<textarea class="form-control"
-								name="antecedentes_patologicos_pessoais" required></textarea>
+								name="antecedentes_patologicos_pessoais" MAXLENGTH="255"
+								required></textarea>
 						</div>
 
 						<!-- Antecedentes patológicos familiares -->
@@ -143,5 +160,6 @@
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap.js"></script>
 	<script type="text/javascript" src="resources/js/inputmask-plugin.js"></script>
+	<script type="text/javascript" src="resources/js/SomenteNumero.js"></script>
 </body>
 </html>
