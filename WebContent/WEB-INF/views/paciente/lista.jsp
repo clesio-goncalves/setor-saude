@@ -83,9 +83,38 @@
 											href="" class="btn btn-info btn-xs"><span
 												class="glyphicon glyphicon-edit"></span> Editar </a> <!-- Botão exluir -->
 											<button class="btn btn-danger btn-xs" data-toggle="modal"
-												data-target="">
+												data-target="#${paciente.codigo_paciente}">
 												<span class="glyphicon glyphicon-trash"></span> Excluir
-											</button></td>
+											</button> <!-- Modal -->
+											<div class="modal fade" id="${paciente.codigo_paciente}"
+												tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+												aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal">
+																<span aria-hidden="true">&times;</span><span
+																	class="sr-only">Fechar</span>
+															</button>
+															<h4 class="modal-title" id="myModalLabel">Exclusão
+																do paciente</h4>
+														</div>
+														<div class="modal-body">Deseja realmente excluir o
+															paciente (${paciente.codigo_paciente}) ->
+															${paciente.nome_paciente}?</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-default"
+																data-dismiss="modal">
+																<span class="glyphicon glyphicon-log-out"></span> Fechar
+															</button>
+															<a
+																href="removePaciente?codigo_paciente=${paciente.codigo_paciente}"
+																class="btn btn-danger"><span
+																class="glyphicon glyphicon-trash"></span> Excluir</a>
+														</div>
+													</div>
+												</div>
+											</div></td>
 									</tr>
 								</c:forEach>
 							</tbody>
