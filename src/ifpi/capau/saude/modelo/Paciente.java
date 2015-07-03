@@ -10,6 +10,8 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Paciente {
 
@@ -23,6 +25,7 @@ public class Paciente {
 	@Size(max = 255)
 	private String vinvulo_paciente;
 
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Calendar data_nascimento;
 
@@ -32,10 +35,12 @@ public class Paciente {
 	@NotNull
 	@Size(max = 255)
 	private String alergia_alimento_medicamento;
+	
 	private String antecedentes_patologicos_familiares;
-	private Boolean etilismo;
-	private Boolean tabagismo;
-	private Boolean drogas_ilicitas;
+	
+	private boolean etilismo;
+	private boolean tabagismo;
+	private boolean drogas_ilicitas;
 
 	public Long getCodigo_paciente() {
 		return codigo_paciente;
@@ -95,27 +100,27 @@ public class Paciente {
 		this.antecedentes_patologicos_familiares = antecedentes_patologicos_familiares;
 	}
 
-	public Boolean getEtilismo() {
+	public boolean isEtilismo() {
 		return etilismo;
 	}
 
-	public void setEtilismo(Boolean etilismo) {
+	public void setEtilismo(boolean etilismo) {
 		this.etilismo = etilismo;
 	}
 
-	public Boolean getTabagismo() {
+	public boolean isTabagismo() {
 		return tabagismo;
 	}
 
-	public void setTabagismo(Boolean tabagismo) {
+	public void setTabagismo(boolean tabagismo) {
 		this.tabagismo = tabagismo;
 	}
 
-	public Boolean getDrogas_ilicitas() {
+	public boolean isDrogas_ilicitas() {
 		return drogas_ilicitas;
 	}
 
-	public void setDrogas_ilicitas(Boolean drogas_ilicitas) {
+	public void setDrogas_ilicitas(boolean drogas_ilicitas) {
 		this.drogas_ilicitas = drogas_ilicitas;
 	}
 

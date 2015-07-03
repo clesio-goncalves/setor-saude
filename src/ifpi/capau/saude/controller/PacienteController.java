@@ -28,7 +28,7 @@ public class PacienteController {
 	@RequestMapping("adicionaPaciente")
 	public String adiciona(@Valid Paciente paciente, BindingResult result) {
 		dao.adiciona(paciente);
-		return "paciente/lista";
+		return "redirect:listaPaciente";
 	}
 
 	@RequestMapping("listaPaciente")

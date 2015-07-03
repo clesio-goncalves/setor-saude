@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" type="text/css"
 	href="resources/css/bootstrap.css" />
+
 </head>
 <body>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -52,7 +53,7 @@
 							<div class="form-group col-sm-4">
 								<label for="data_nascimento">Data de nascimento*</label> <input
 									type="text" class="form-control" name="data_nascimento"
-									placeholder="00/00/0000" data-mask="00/00/0000">
+									data-mask="99/99/9999" required>
 							</div>
 
 							<!-- SEXO -->
@@ -141,6 +142,6 @@
 
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/inputmask-plugin.js"></script>
+	<script type="text/javascript" src="resources/js/inputmask-plugin.js"></script>
 </body>
 </html>
