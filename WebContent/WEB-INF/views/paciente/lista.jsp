@@ -8,9 +8,6 @@
 <meta charset="utf-8">
 <title>Listar Pacientes</title>
 <meta name="viewport" content="width=device-width">
-
-<link rel="stylesheet" type="text/css"
-	href="resources/css/bootstrap.css" />
 <link rel="stylesheet" type="text/css"
 	href="resources/css/jquery.dataTables.css">
 </head>
@@ -44,7 +41,7 @@
 								<!-- percorre pacientes montando as linhas da tabela -->
 								<c:forEach var="paciente" items="${pacientes}">
 									<tr>
-										<td>${paciente.codigo_paciente}</td>
+										<td>${paciente.id}</td>
 										<td>${paciente.nome_paciente}</td>
 										<td>${paciente.rg_paciente}</td>
 										<td>${paciente.cartao_sus_paciente}</td>
@@ -57,15 +54,15 @@
 										<!-- AÇÕES -->
 										<td><a href="" class="btn btn-success btn-xs"><span
 												class="glyphicon glyphicon-zoom-in"></span> Exibir</a> <a
-											href="mostraPaciente?codigo_paciente=${paciente.codigo_paciente}"
+											href="mostraPaciente?id=${paciente.id}"
 											class="btn btn-info btn-xs"><span
 												class="glyphicon glyphicon-edit"></span> Editar </a> <!-- Botão exluir -->
 											<button class="btn btn-danger btn-xs" data-toggle="modal"
-												data-target="#${paciente.codigo_paciente}">
+												data-target="#${paciente.id}">
 												<span class="glyphicon glyphicon-trash"></span> Excluir
 											</button> <!-- Modal -->
-											<div class="modal fade" id="${paciente.codigo_paciente}"
-												tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+											<div class="modal fade" id="${paciente.id}" tabindex="-1"
+												role="dialog" aria-labelledby="myModalLabel"
 												aria-hidden="true">
 												<div class="modal-dialog">
 													<div class="modal-content">
@@ -78,15 +75,13 @@
 																do paciente</h4>
 														</div>
 														<div class="modal-body">Deseja realmente excluir o
-															paciente (${paciente.codigo_paciente}) ->
-															${paciente.nome_paciente}?</div>
+															paciente (${paciente.id}) -> ${paciente.nome_paciente}?</div>
 														<div class="modal-footer">
 															<button type="button" class="btn btn-default"
 																data-dismiss="modal">
 																<span class="glyphicon glyphicon-log-out"></span> Fechar
 															</button>
-															<a
-																href="removePaciente?codigo_paciente=${paciente.codigo_paciente}"
+															<a href="removePaciente?id=${paciente.id}"
 																class="btn btn-danger"><span
 																class="glyphicon glyphicon-trash"></span> Excluir</a>
 														</div>

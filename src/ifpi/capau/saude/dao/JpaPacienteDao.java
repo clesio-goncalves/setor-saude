@@ -27,13 +27,12 @@ public class JpaPacienteDao implements PacienteDao {
 		return manager.createQuery("select p from Paciente p").getResultList();
 	}
 
-	public Paciente buscaPorCodigo(Long codigo) {
-		return manager.find(Paciente.class, codigo);
+	public Paciente buscaPorId(Long id) {
+		return manager.find(Paciente.class, id);
 	}
 
 	public void remove(Paciente paciente) {
-		Paciente pacienteARemover = buscaPorCodigo(paciente
-				.getCodigo_paciente());
+		Paciente pacienteARemover = buscaPorId(paciente.getId());
 		manager.remove(pacienteARemover);
 	}
 

@@ -17,15 +17,11 @@ public class Paciente {
 
 	@Id
 	@GeneratedValue
-	private Long codigo_paciente;
+	private Long id;
 
 	@NotNull
 	@Size(max = 255)
 	private String nome_paciente;
-
-	@NotNull
-	@Size(max = 255)
-	private String vinvulo_paciente;
 
 	@NotNull
 	@Size(max = 255)
@@ -34,6 +30,10 @@ public class Paciente {
 	@NotNull
 	@Size(max = 15)
 	private String cartao_sus_paciente;
+
+	@NotNull
+	@Size(max = 255)
+	private String vinvulo_paciente;
 
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
@@ -47,6 +47,10 @@ public class Paciente {
 	@Size(max = 255)
 	private String alergia_alimento_medicamento;
 
+	@NotNull
+	@Size(max = 255)
+	private String problema_saude;
+
 	@Size(max = 255)
 	private String antecedentes_patologicos_familiares;
 
@@ -54,12 +58,12 @@ public class Paciente {
 	private boolean tabagismo;
 	private boolean drogas_ilicitas;
 
-	public Long getCodigo_paciente() {
-		return codigo_paciente;
+	public Long getId() {
+		return id;
 	}
 
-	public void setCodigo_paciente(Long codigo_paciente) {
-		this.codigo_paciente = codigo_paciente;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getNome_paciente() {
@@ -68,14 +72,6 @@ public class Paciente {
 
 	public void setNome_paciente(String nome_paciente) {
 		this.nome_paciente = nome_paciente;
-	}
-
-	public String getVinvulo_paciente() {
-		return vinvulo_paciente;
-	}
-
-	public void setVinvulo_paciente(String vinvulo_paciente) {
-		this.vinvulo_paciente = vinvulo_paciente;
 	}
 
 	public String getRg_paciente() {
@@ -92,6 +88,14 @@ public class Paciente {
 
 	public void setCartao_sus_paciente(String cartao_sus_paciente) {
 		this.cartao_sus_paciente = cartao_sus_paciente;
+	}
+
+	public String getVinvulo_paciente() {
+		return vinvulo_paciente;
+	}
+
+	public void setVinvulo_paciente(String vinvulo_paciente) {
+		this.vinvulo_paciente = vinvulo_paciente;
 	}
 
 	public Calendar getData_nascimento() {
@@ -117,6 +121,14 @@ public class Paciente {
 	public void setAlergia_alimento_medicamento(
 			String alergia_alimento_medicamento) {
 		this.alergia_alimento_medicamento = alergia_alimento_medicamento;
+	}
+
+	public String getProblema_saude() {
+		return problema_saude;
+	}
+
+	public void setProblema_saude(String problema_saude) {
+		this.problema_saude = problema_saude;
 	}
 
 	public String getAntecedentes_patologicos_familiares() {

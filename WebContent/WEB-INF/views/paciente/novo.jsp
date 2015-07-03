@@ -8,9 +8,6 @@
 <title>Cadastrar Paciente</title>
 <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" type="text/css"
-	href="resources/css/bootstrap.css" />
-
 </head>
 <body>
 	<c:import url="../cabecalho.jsp" />
@@ -93,23 +90,23 @@
 
 					<fieldset class="col-md-6">
 						<legend>
-							<font color="#ffffff">.</font>
+							<br />
 						</legend>
 
-						<!-- Antecedentes patológicos pessoais -->
+						<!-- Problema de saúde -->
 						<div class="form-group">
-							<label for="antecedentes_patologicos_pessoais">Teve ou
-								tem algum problema de saúde? Quais?*</label>
-							<textarea class="form-control"
-								name="antecedentes_patologicos_pessoais" MAXLENGTH="255"
-								required></textarea>
+							<label for="problema_saude">Teve ou tem algum problema de
+								saúde? Quais?*</label>
+							<textarea class="form-control" name="problema_saude"
+								MAXLENGTH="255" required></textarea>
 						</div>
 
 						<!-- Antecedentes patológicos familiares -->
 						<div class="form-group">
 							<label for="antecedentes_patologicos_familiares">Antecedentes
-								patológicos familiares</label> <input type="text" class="form-control"
-								name="antecedentes_patologicos_familiares" MAXLENGTH="255">
+								patológicos familiares</label>
+							<textarea class="form-control"
+								name="antecedentes_patologicos_familiares" MAXLENGTH="255"></textarea>
 						</div>
 
 						<!-- ETILISMO -->

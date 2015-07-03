@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css"
+	href="resources/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css"
 	href="resources/css/cabecalho.css" />
 </head>
 <body>
@@ -31,6 +33,13 @@
 					</a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="novoPaciente">Paciente</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-expanded="false">Relatórios
+							<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="listaPaciente">Paciente</a></li>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

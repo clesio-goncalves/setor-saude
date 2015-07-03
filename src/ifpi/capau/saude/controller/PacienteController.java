@@ -44,8 +44,8 @@ public class PacienteController {
 	}
 
 	@RequestMapping("mostraPaciente")
-	public String mostra(Long codigo, Model model) {
-		model.addAttribute("paciente", dao.buscaPorCodigo(codigo));
+	public String mostra(Long id, Model model) {
+		model.addAttribute("paciente", dao.buscaPorId(id));
 		return "paciente/mostra";
 	}
 

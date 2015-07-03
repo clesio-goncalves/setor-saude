@@ -5,7 +5,7 @@ import ifpi.capau.saude.modelo.Paciente;
 import java.util.List;
 
 public interface PacienteDao {
-	Paciente buscaPorCodigo(Long codigo);
+	Paciente buscaPorId(Long id);
 
 	List<Paciente> lista();
 
