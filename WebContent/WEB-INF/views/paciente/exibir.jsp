@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,17 +36,17 @@
 							</tr>
 
 							<tr>
-								<th>Cart√£o SUS</th>
+								<th>Cart„o SUS</th>
 								<c:if test="${not empty paciente.cartao_sus}">
 									<td>${paciente.cartao_sus}</td>
 								</c:if>
 								<c:if test="${empty paciente.cartao_sus}">
-									<td>N√£o informado</td>
+									<td>N„o informado</td>
 								</c:if>
 							</tr>
 
 							<tr>
-								<th>V√≠nculo institucional</th>
+								<th>VÌnculo institucional</th>
 								<td>${paciente.vinculo}</td>
 							</tr>
 
@@ -67,19 +67,19 @@
 							</tr>
 
 							<tr>
-								<th>Teve ou tem algum problema de sa√∫de? Quais?</th>
+								<th>Teve ou tem algum problema de sa˙de? Quais?</th>
 								<td>${paciente.problema_saude}</td>
 							</tr>
 
 							<tr>
-								<th>Antecedentes patol√≥gicos familiares</th>
+								<th>Antecedentes patolÛgicos familiares</th>
 								<c:if
 									test="${not empty paciente.antecedentes_patologicos_familiares}">
 									<td>${paciente.antecedentes_patologicos_familiares}</td>
 								</c:if>
 								<c:if
 									test="${empty paciente.antecedentes_patologicos_familiares}">
-									<td>N√£o informado</td>
+									<td>N„o informado</td>
 								</c:if>
 							</tr>
 
@@ -89,7 +89,7 @@
 									<td>Sim</td>
 								</c:if>
 								<c:if test="${paciente.etilismo eq false}">
-									<td>N√£o</td>
+									<td>N„o</td>
 								</c:if>
 							</tr>
 
@@ -99,17 +99,17 @@
 									<td>Sim</td>
 								</c:if>
 								<c:if test="${paciente.tabagismo eq false}">
-									<td>N√£o</td>
+									<td>N„o</td>
 								</c:if>
 							</tr>
 
 							<tr>
-								<th>Drogas il√≠citas</th>
+								<th>Drogas ilÌcitas</th>
 								<c:if test="${paciente.drogas_ilicitas eq true}">
 									<td>Sim</td>
 								</c:if>
 								<c:if test="${paciente.drogas_ilicitas eq false}">
-									<td>N√£o</td>
+									<td>N„o</td>
 								</c:if>
 							</tr>
 						</table>
@@ -139,7 +139,7 @@
 							<button type="button" class="close" data-dismiss="modal">
 								<span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span>
 							</button>
-							<h4 class="modal-title" id="myModalLabel">Exclus√£o do
+							<h4 class="modal-title" id="myModalLabel">Exclus„o do
 								paciente</h4>
 						</div>
 						<div class="modal-body">Deseja realmente excluir o paciente

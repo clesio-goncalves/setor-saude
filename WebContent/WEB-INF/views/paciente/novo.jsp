@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h1>Cadastrar Paciente</h1>
-			<p>Preencha o formul√°rio abaixo para realizar o cadastro.</p>
+			<p>Preencha o formul·rio abaixo para realizar o cadastro.</p>
 		</div>
 	</div>
 	<div class="container">
@@ -40,18 +40,18 @@
 									class="form-control" name="rg" MAXLENGTH="12" required>
 							</div>
 
-							<!-- CART√ÉO SUS -->
+							<!-- CART√O SUS -->
 							<div class="form-group col-sm-6">
-								<label for="cartao_sus">Cart√£o SUS</label> <input type="text"
+								<label for="cartao_sus">Cart„o SUS</label> <input type="text"
 									class="form-control" name="cartao_sus" MAXLENGTH="15"
 									onkeypress='return SomenteNumero(event)'>
 							</div>
 						</div>
 
 						<div class="row">
-							<!-- V√çNCULO -->
+							<!-- VÕNCULO -->
 							<div class="form-group col-sm-4">
-								<label for="vinculo">V√≠nculo institucional*</label> <select
+								<label for="vinculo">VÌnculo institucional*</label> <select
 									class="form-control" name="vinculo">
 									<option>Aluno</option>
 									<option>Comunidade</option>
@@ -92,18 +92,18 @@
 							<br />
 						</legend>
 
-						<!-- Problema de sa√∫de -->
+						<!-- Problema de sa˙de -->
 						<div class="form-group">
 							<label for="problema_saude">Teve ou tem algum problema de
-								sa√∫de? Quais?*</label>
+								sa˙de? Quais?*</label>
 							<textarea class="form-control" name="problema_saude"
 								MAXLENGTH="255" required></textarea>
 						</div>
 
-						<!-- Antecedentes patol√≥gicos familiares -->
+						<!-- Antecedentes patolÛgicos familiares -->
 						<div class="form-group">
 							<label for="antecedentes_patologicos_familiares">Antecedentes
-								patol√≥gicos familiares</label>
+								patolÛgicos familiares</label>
 							<textarea class="form-control"
 								name="antecedentes_patologicos_familiares" MAXLENGTH="255"></textarea>
 						</div>
@@ -130,13 +130,13 @@
 						<div class="form-group">
 							<div class="checkbox">
 								<label> <input type="checkbox" name="drogas_ilicitas">
-									Drogas il√≠citas
+									Drogas ilÌcitas
 								</label>
 							</div>
 						</div>
 
-						<!-- OBTIGAT√ìRIO -->
-						<label for="obrigatorio">(*) Campos obrigat√≥rios</label>
+						<!-- OBTIGAT”RIO -->
+						<label for="obrigatorio">(*) Campos obrigatÛrios</label>
 					</fieldset>
 				</div>
 				<div>

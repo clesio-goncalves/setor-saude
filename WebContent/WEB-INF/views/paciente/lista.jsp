@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,11 +30,11 @@
 									<th>ID</th>
 									<th>Nome</th>
 									<th>RG</th>
-									<th>Cart√£o SUS</th>
-									<th>V√≠nculo</th>
+									<th>Cart„o SUS</th>
+									<th>VÌnculo</th>
 									<th>Nascimento</th>
 									<th>Sexo</th>
-									<th>A√ß√µes</th>
+									<th>AÁıes</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -45,12 +45,12 @@
 										<td>${paciente.nome}</td>
 										<td>${paciente.rg}</td>
 
-										<!-- CART√ÉO SUS -->
+										<!-- CART√O SUS -->
 										<c:if test="${not empty paciente.cartao_sus}">
 											<td>${paciente.cartao_sus}</td>
 										</c:if>
 										<c:if test="${empty paciente.cartao_sus}">
-											<td>N√£o informado</td>
+											<td>N„o informado</td>
 										</c:if>
 
 										<td>${paciente.vinculo}</td>
@@ -66,14 +66,14 @@
 											<td>F</td>
 										</c:if>
 
-										<!-- A√á√ïES -->
+										<!-- A«’ES -->
 										<td>
 											<!-- Exibir --> <a href="exibirPaciente?id=${paciente.id}"
 											class="btn btn-success btn-xs"><span
 												class="glyphicon glyphicon-zoom-in"></span> Exibir</a> <!-- Editar -->
 											<a href="editarPaciente?id=${paciente.id}"
 											class="btn btn-info btn-xs"><span
-												class="glyphicon glyphicon-edit"></span> Editar </a> <!-- Bot√£o exluir -->
+												class="glyphicon glyphicon-edit"></span> Editar </a> <!-- Bot„o exluir -->
 											<button class="btn btn-danger btn-xs" data-toggle="modal"
 												data-target="#${paciente.id}">
 												<span class="glyphicon glyphicon-trash"></span> Excluir
@@ -88,7 +88,7 @@
 																<span aria-hidden="true">&times;</span><span
 																	class="sr-only">Fechar</span>
 															</button>
-															<h4 class="modal-title" id="myModalLabel">Exclus√£o
+															<h4 class="modal-title" id="myModalLabel">Exclus„o
 																do paciente</h4>
 														</div>
 														<div class="modal-body">Deseja realmente excluir o
