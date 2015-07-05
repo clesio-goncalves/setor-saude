@@ -20,28 +20,28 @@ public class Paciente {
 	private Long id;
 
 	@NotNull
-	@Size(max = 255)
-	private String nome_paciente;
+	@Size(max = 100)
+	private String nome;
 
 	@NotNull
-	@Size(max = 255)
-	private String rg_paciente;
+	@Size(max = 12)
+	private String rg;
 
 	@NotNull
 	@Size(max = 15)
-	private String cartao_sus_paciente;
+	private String cartao_sus;
 
 	@NotNull
-	@Size(max = 255)
-	private String vinvulo_paciente;
+	@Size(max = 11)
+	private String vinculo;
 
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Calendar data_nascimento;
 
 	@NotNull
-	@Size(max = 255)
-	private String sexo_paciente;
+	@Size(max = 9)
+	private String sexo;
 
 	@NotNull
 	@Size(max = 255)
@@ -66,36 +66,36 @@ public class Paciente {
 		this.id = id;
 	}
 
-	public String getNome_paciente() {
-		return nome_paciente;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNome_paciente(String nome_paciente) {
-		this.nome_paciente = nome_paciente;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getRg_paciente() {
-		return rg_paciente;
+	public String getRg() {
+		return rg;
 	}
 
-	public void setRg_paciente(String rg_paciente) {
-		this.rg_paciente = rg_paciente;
+	public void setRg(String rg) {
+		this.rg = rg;
 	}
 
-	public String getCartao_sus_paciente() {
-		return cartao_sus_paciente;
+	public String getCartao_sus() {
+		return cartao_sus;
 	}
 
-	public void setCartao_sus_paciente(String cartao_sus_paciente) {
-		this.cartao_sus_paciente = cartao_sus_paciente;
+	public void setCartao_sus(String cartao_sus) {
+		this.cartao_sus = cartao_sus;
 	}
 
-	public String getVinvulo_paciente() {
-		return vinvulo_paciente;
+	public String getVinculo() {
+		return vinculo;
 	}
 
-	public void setVinvulo_paciente(String vinvulo_paciente) {
-		this.vinvulo_paciente = vinvulo_paciente;
+	public void setVinculo(String vinculo) {
+		this.vinculo = vinculo;
 	}
 
 	public Calendar getData_nascimento() {
@@ -106,12 +106,12 @@ public class Paciente {
 		this.data_nascimento = data_nascimento;
 	}
 
-	public String getSexo_paciente() {
-		return sexo_paciente;
+	public String getSexo() {
+		return sexo;
 	}
 
-	public void setSexo_paciente(String sexo_paciente) {
-		this.sexo_paciente = sexo_paciente;
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
 	public String getAlergia_alimento_medicamento() {

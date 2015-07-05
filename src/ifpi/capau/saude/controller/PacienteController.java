@@ -28,10 +28,10 @@ public class PacienteController {
 	@RequestMapping("adicionaPaciente")
 	public String adiciona(@Valid Paciente paciente, BindingResult result) {
 		dao.adiciona(paciente);
-		return "redirect:listaPaciente";
+		return "redirect:listaPacientes";
 	}
 
-	@RequestMapping("listaPaciente")
+	@RequestMapping("listaPacientes")
 	public String lista(Model model) {
 		model.addAttribute("pacientes", dao.lista());
 		return "paciente/lista";
@@ -40,19 +40,25 @@ public class PacienteController {
 	@RequestMapping("removePaciente")
 	public String remove(Paciente paciente) {
 		dao.remove(paciente);
-		return "redirect:listaPaciente";
+		return "redirect:listaPacientes";
 	}
 
-	@RequestMapping("mostraPaciente")
-	public String mostra(Long id, Model model) {
+	@RequestMapping("editarPaciente")
+	public String editar(Long id, Model model) {
 		model.addAttribute("paciente", dao.buscaPorId(id));
-		return "paciente/mostra";
+		return "paciente/editar";
+	}
+
+	@RequestMapping("exibirPaciente")
+	public String exibir(Long id, Model model) {
+		model.addAttribute("paciente", dao.buscaPorId(id));
+		return "paciente/exibir";
 	}
 
 	@RequestMapping("alteraPaciente")
 	public String altera(Paciente paciente) {
 		dao.altera(paciente);
-		return "redirect:listaPaciente";
+		return "redirect:listaPacientes";
 	}
 
 }

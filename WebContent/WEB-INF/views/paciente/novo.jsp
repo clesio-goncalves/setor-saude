@@ -28,32 +28,31 @@
 
 						<!-- NOME -->
 						<div class="form-group">
-							<label for="nome_paciente">Nome*</label> <input type="text"
-								class="form-control" name="nome_paciente" autofocus
-								MAXLENGTH="255" required>
+							<label for="nome">Nome*</label> <input type="text"
+								class="form-control" name="nome" autofocus MAXLENGTH="100"
+								required>
 						</div>
 
 						<div class="row">
 							<!-- RG -->
 							<div class="form-group col-sm-6">
-								<label for="rg_paciente">RG*</label> <input type="text"
-									class="form-control" name="rg_paciente" MAXLENGTH="255"
-									required>
+								<label for="rg">RG*</label> <input type="text"
+									class="form-control" name="rg" MAXLENGTH="12" required>
 							</div>
 
 							<!-- CARTÃO SUS -->
 							<div class="form-group col-sm-6">
-								<label for="cartao_sus_paciente">Cartão SUS</label> <input
-									type="text" class="form-control" name="cartao_sus_paciente"
-									MAXLENGTH="15" onkeypress='return SomenteNumero(event)'>
+								<label for="cartao_sus">Cartão SUS</label> <input type="text"
+									class="form-control" name="cartao_sus" MAXLENGTH="15"
+									onkeypress='return SomenteNumero(event)'>
 							</div>
 						</div>
 
 						<div class="row">
 							<!-- VÍNCULO -->
 							<div class="form-group col-sm-4">
-								<label for="vinvulo_paciente">Vínculo institucional*</label> <select
-									class="form-control" name="vinvulo_paciente">
+								<label for="vinculo">Vínculo institucional*</label> <select
+									class="form-control" name="vinculo">
 									<option>Aluno</option>
 									<option>Comunidade</option>
 									<option>Servidor</option>
@@ -71,8 +70,8 @@
 
 							<!-- SEXO -->
 							<div class="form-group col-sm-4">
-								<label for="sexo_paciente">Sexo*</label> <select
-									class="form-control" name="sexo_paciente">
+								<label for="sexo">Sexo*</label> <select class="form-control"
+									name="sexo">
 									<option>Masculino</option>
 									<option>Feminino</option>
 								</select>

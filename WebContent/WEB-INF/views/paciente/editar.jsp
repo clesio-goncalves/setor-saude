@@ -32,34 +32,33 @@
 
 						<!-- NOME -->
 						<div class="form-group">
-							<label for="nome_paciente">Nome*</label> <input type="text"
-								class="form-control" name="nome_paciente" autofocus
-								MAXLENGTH="255" required value="${paciente.nome_paciente}">
+							<label for="nome">Nome*</label> <input type="text"
+								class="form-control" name="nome" autofocus MAXLENGTH="100"
+								required value="${paciente.nome}">
 						</div>
 
 						<div class="row">
 							<!-- RG -->
 							<div class="form-group col-sm-6">
-								<label for="rg_paciente">RG*</label> <input type="text"
-									class="form-control" name="rg_paciente" MAXLENGTH="255"
-									required value="${paciente.rg_paciente}">
+								<label for="rg">RG*</label> <input type="text"
+									class="form-control" name="rg" MAXLENGTH="12" required
+									value="${paciente.rg}">
 							</div>
 
 							<!-- CARTÃO SUS -->
 							<div class="form-group col-sm-6">
-								<label for="cartao_sus_paciente">Cartão SUS</label> <input
-									type="text" class="form-control" name="cartao_sus_paciente"
-									MAXLENGTH="15" onkeypress='return SomenteNumero(event)'
-									value="${paciente.cartao_sus_paciente}">
+								<label for="cartao_sus">Cartão SUS</label> <input type="text"
+									class="form-control" name="cartao_sus" MAXLENGTH="15"
+									onkeypress='return SomenteNumero(event)'
+									value="${paciente.cartao_sus}">
 							</div>
 						</div>
 
 						<div class="row">
 							<!-- VÍNCULO -->
 							<div class="form-group col-sm-4">
-								<label for="vinvulo_paciente">Vínculo institucional*</label> <select
-									class="form-control" name="vinvulo_paciente"
-									value="${paciente.vinvulo_paciente}">
+								<label for="vinculo">Vínculo institucional*</label> <select
+									class="form-control" name="vinculo" value="${paciente.vinculo}">
 									<option>Aluno</option>
 									<option>Comunidade</option>
 									<option>Servidor</option>
@@ -79,9 +78,8 @@
 
 							<!-- SEXO -->
 							<div class="form-group col-sm-4">
-								<label for="sexo_paciente">Sexo*</label> <select
-									class="form-control" name="sexo_paciente"
-									value="${paciente.sexo_paciente}">
+								<label for="sexo">Sexo*</label> <select class="form-control"
+									name="sexo" value="${paciente.sexo}">
 									<option>Masculino</option>
 									<option>Feminino</option>
 								</select>
@@ -153,8 +151,8 @@
 					</fieldset>
 				</div>
 				<div>
-					<a href="listaPaciente" class="btn btn-default btn-lg"> <span
-						class="glyphicon glyphicon-chevron-left"></span> Cancelar
+					<a href="listaPacientes" class="btn btn-default btn-lg"> <span
+						class="glyphicon glyphicon-remove"></span> Cancelar
 					</a>
 					<button type="submit" class="btn btn-primary btn-lg">
 						<span class="glyphicon glyphicon-refresh"></span> Atualizar

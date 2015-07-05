@@ -27,12 +27,12 @@
 							id="table_id">
 							<thead>
 								<tr>
-									<th>Código</th>
+									<th>ID</th>
 									<th>Nome</th>
 									<th>RG</th>
 									<th>Cartão SUS</th>
 									<th>Vínculo</th>
-									<th>Data de nascimento</th>
+									<th>Nascimento</th>
 									<th>Sexo</th>
 									<th>Ações</th>
 								</tr>
@@ -42,19 +42,29 @@
 								<c:forEach var="paciente" items="${pacientes}">
 									<tr>
 										<td>${paciente.id}</td>
-										<td>${paciente.nome_paciente}</td>
-										<td>${paciente.rg_paciente}</td>
-										<td>${paciente.cartao_sus_paciente}</td>
-										<td>${paciente.vinvulo_paciente}</td>
+										<td>${paciente.nome}</td>
+										<td>${paciente.rg}</td>
+
+										<!-- CARTÃO SUS -->
+										<c:if test="${not empty paciente.cartao_sus}">
+											<td>${paciente.cartao_sus}</td>
+										</c:if>
+										<c:if test="${empty paciente.cartao_sus}">
+											<td>Não informado</td>
+										</c:if>
+
+										<td>${paciente.vinculo}</td>
 										<td><fmt:formatDate
 												value="${paciente.data_nascimento.time}"
 												pattern="dd/MM/yyyy" /></td>
-										<td>${paciente.sexo_paciente}</td>
+										<td>${paciente.sexo}</td>
 
 										<!-- AÇÕES -->
-										<td><a href="" class="btn btn-success btn-xs"><span
-												class="glyphicon glyphicon-zoom-in"></span> Exibir</a> <a
-											href="mostraPaciente?id=${paciente.id}"
+										<td>
+											<!-- Exibir --> <a href="exibirPaciente?id=${paciente.id}"
+											class="btn btn-success btn-xs"><span
+												class="glyphicon glyphicon-zoom-in"></span> Exibir</a> <!-- Editar -->
+											<a href="editarPaciente?id=${paciente.id}"
 											class="btn btn-info btn-xs"><span
 												class="glyphicon glyphicon-edit"></span> Editar </a> <!-- Botão exluir -->
 											<button class="btn btn-danger btn-xs" data-toggle="modal"
@@ -75,7 +85,7 @@
 																do paciente</h4>
 														</div>
 														<div class="modal-body">Deseja realmente excluir o
-															paciente (${paciente.id}) -> ${paciente.nome_paciente}?</div>
+															paciente (${paciente.id}) -> ${paciente.nome}?</div>
 														<div class="modal-footer">
 															<button type="button" class="btn btn-default"
 																data-dismiss="modal">
@@ -87,7 +97,8 @@
 														</div>
 													</div>
 												</div>
-											</div></td>
+											</div>
+										</td>
 									</tr>
 								</c:forEach>
 							</tbody>
