@@ -57,7 +57,14 @@
 										<td><fmt:formatDate
 												value="${paciente.data_nascimento.time}"
 												pattern="dd/MM/yyyy" /></td>
-										<td>${paciente.sexo}</td>
+
+										<!-- Sexo -->
+										<c:if test="${paciente.sexo eq 'Masculino'}">
+											<td>M</td>
+										</c:if>
+										<c:if test="${paciente.sexo eq 'Feminino'}">
+											<td>F</td>
+										</c:if>
 
 										<!-- AÇÕES -->
 										<td>
