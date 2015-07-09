@@ -4,14 +4,36 @@ import ifpi.capau.saude.modelo.Paciente;
 
 import java.util.List;
 
-public interface PacienteDao {
-	Paciente buscaPorId(Long id);
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
-	List<Paciente> lista();
+import org.springframework.stereotype.Repository;
 
-	void adiciona(Paciente paciente);
+@Repository
+public class PacienteDao {
 
-	void altera(Paciente paciente);
+	@PersistenceContext
+	private EntityManager manager;
 
-	void remove(Paciente paciente);
+	public void adiciona(Paciente paciente) {
+		manager.persist(paciente);
+	}
+
+	public void altera(Paciente paciente) {
+		manager.merge(paciente);
+	}
+
+	public List<Paciente> lista() {
+		return manager.createQuery("select p from Paciente p").getResultList();
+	}
+
+	public Paciente buscaPorId(Long id) {
+		return manager.find(Paciente.class, id);
+	}
+
+	public void remove(Paciente paciente) {
+		Paciente pacienteARemover = buscaPorId(paciente.getId());
+		manager.remove(pacienteARemover);
+	}
+
 }

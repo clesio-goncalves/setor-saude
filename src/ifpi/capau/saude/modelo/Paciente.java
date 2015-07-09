@@ -2,11 +2,13 @@ package ifpi.capau.saude.modelo;
 
 import java.util.Calendar;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -25,6 +27,7 @@ public class Paciente {
 
 	@NotNull
 	@Size(max = 12)
+	@Column(unique = true)
 	private String rg;
 
 	@NotNull
@@ -35,9 +38,13 @@ public class Paciente {
 	@Size(max = 11)
 	private String vinculo;
 
+	@NotNull
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Calendar data_nascimento;
+
+	@Transient
+	private int idade;
 
 	@NotNull
 	@Size(max = 9)
@@ -104,6 +111,14 @@ public class Paciente {
 
 	public void setData_nascimento(Calendar data_nascimento) {
 		this.data_nascimento = data_nascimento;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
 
 	public String getSexo() {

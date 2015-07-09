@@ -16,9 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PacienteController {
 
+	private final PacienteDao dao;
+
 	@Autowired
-	PacienteDao dao; // Usando apenas a interface (deixa genérico -
-						// posso usar o jdbc se eu quiser)
+	public PacienteController(PacienteDao dao) {
+		this.dao = dao;
+	}
 
 	@RequestMapping("novoPaciente")
 	public String novo() {
@@ -27,6 +30,10 @@ public class PacienteController {
 
 	@RequestMapping("adicionaPaciente")
 	public String adiciona(@Valid Paciente paciente, BindingResult result) {
+		if (result.hasFieldErrors()) {
+			return "paciente/novo";
+		}
+
 		dao.adiciona(paciente);
 		return "redirect:listaPacientes";
 	}
@@ -56,7 +63,12 @@ public class PacienteController {
 	}
 
 	@RequestMapping("alteraPaciente")
-	public String altera(Paciente paciente) {
+	public String altera(@Valid Paciente paciente, BindingResult result) {
+
+		if (result.hasFieldErrors()) {
+			return "paciente/editar";
+		}
+
 		dao.altera(paciente);
 		return "redirect:listaPacientes";
 	}

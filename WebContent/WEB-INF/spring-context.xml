@@ -44,4 +44,9 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 
+	<!-- Registra o interceptor -->
+	<mvc:interceptors>
+		<bean class="ifpi.capau.saude.interceptor.AutorizadorInterceptor" />
+	</mvc:interceptors>
+
 </beans>

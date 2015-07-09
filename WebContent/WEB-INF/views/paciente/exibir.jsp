@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width">
 </head>
 <body>
-	<c:import url="../cabecalho.jsp" />
+	<c:import url="../componentes/cabecalho.jsp" />
 
 	<div class="container">
 		<div class="row">
@@ -162,7 +162,7 @@
 		</div>
 	</div>
 
-	<c:import url="../rodape.jsp" />
+	<c:import url="../componentes/rodape.jsp" />
 
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap.js"></script>

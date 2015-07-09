@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,8 +12,7 @@
 	href="resources/css/bootstrap.css" />
 </head>
 <body>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-	<c:import url="cabecalho.jsp" />
+	<c:import url="componentes/cabecalho.jsp" />
 
 	<div class="jumbotron">
 		<div class="container">
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 
-	<c:import url="rodape.jsp" />
+	<c:import url="componentes/rodape.jsp" />
 
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap.js"></script>

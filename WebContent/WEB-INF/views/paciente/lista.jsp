@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<c:import url="../cabecalho.jsp" />
+	<c:import url="../componentes/cabecalho.jsp" />
 
 	<div class="container">
 		<div class="row">
@@ -120,7 +120,7 @@
 	</div>
 
 
-	<c:import url="../rodape.jsp" />
+	<c:import url="../componentes/rodape.jsp" />
 
 	<!-- jQuery -->
 	<script type="text/javascript" src="resources/js/jquery.js"></script>
